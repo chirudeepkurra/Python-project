@@ -16,7 +16,8 @@ RUN python3 -m venv /app/venv
 
 # Install Python packages within the virtual environment
 RUN /app/venv/bin/pip install --upgrade pip && \
-    /app/venv/bin/pip install -r /app/requirements.txt
+    /app/venv/bin/pip install -r /app/requirements.txt --format=legacy
+
 
 # Copy the rest of the application code
 COPY devops /app/devops
